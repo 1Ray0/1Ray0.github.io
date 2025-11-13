@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(45deg, #1a1a1a, #0f0f0f);
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.neon-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0055, #00ff88);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff0055, 0 0 50px #00ff88;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #ff00ff, 0 0 40px #ff0055, 0 0 50px #ff0055;
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.enter-btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border: 2px solid #00ff88;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+    background: #00ff88;
+    color: #0f0f0f;
+    box-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88;
+}
